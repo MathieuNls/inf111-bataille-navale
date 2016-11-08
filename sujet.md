@@ -161,6 +161,20 @@ Au tour 4 l'algorithme tir au nord du dernier touché et touche à nouveau un na
 \caption{Finalement, les navires sont coulés au tour 53.}
 \end{figure}
 
+### Contraintes d'implémentation
+
+Au niveau de l'implémentation des différentes classes:
+
+- Vous devez avoir une interface IJoueur qui contient les services suivants
+	- tire(IJoueur cible)
+	- recoitTire(Position position)
+- Vous devez avoir une classe abstraite AJoueur qui implémente l'interface IJoueur et implémente l'algorithme "normal". En plus, cette classe abstraite contient tout les services nécessaire au positionnement des bateaux (placeNavire(Navire navire)). L'algorithme "normal" est factorisé au niveau de la classe abstraite car le joueur humain va aussi l'utiliser (voir prochaine section).
+- La classe AJoueur est étendue par une classe JoueurArtificiel et une classe JoueurHumain. Chacune des classes spécialises AJoueur de manière différente.
+- La classe Navire contient toutes les informations nécessaire pour modéliser un navire 
+	- Liste dynamique de Position. Une position est une case de la carte (i.e. A-1). Une position, en plus de la position en lettre et en chiffre contient un boolean touché qui indique si cette position a déjà été visée par un tir.
+	- boolean estCoulé() qui retourne vrai si toute les positions ont touché == true.
+	- Le nom du navire (i.e. porte-avions, ...)
+
 ## L'interface à réaliser
 
 La figure ci-dessous présente l’interface graphique à réaliser.
@@ -179,7 +193,7 @@ La figure ci-dessous présente l’interface graphique à réaliser.
 - Recommencer : Recommence une nouvelle partie.
 - 5 Derniers coups : Affiche les cinq derniers coups.
 - Zone de texte en bas : Affiche les informations sur la partie. (Choisissez une case pour faire feu, Vous avez gagné, ect...).
-- x, o et + : Les x sont des touchés, les o des coulés et les + vos bateaux touchés.
+- x, o et + :  Les x sont des tires touchés, les o sont des tires à l'eau et les + sont vos bateaux non touchés.
 
 ### Comportement de l'interface
 
@@ -221,7 +235,7 @@ Voici les règles d'implémentation à respecter :
  - une suite de JTextArea
 - Les boutons de gauche sont dans un JPannel
 - Chaque grille est dans un JPannel
-- Chaque "5 derniers coups" est dans un JPannel et est implémente le comportement observateur.
+- Chaque "5 derniers coups" est dans un JPannel et implémente le comportement observateur.
 - Les coups des joueurs sont stockés dans des files dynamiques ce qui permet d'annuler un coup.
 - Le bouton "Aide" qui suggère une case sur laquelle tirer au joueur humain fait appel au même algorithme (ensemble de sous programmes) que le joueur artificiel.
 - Les comportements suivant s'affichent dans la zone texte en bas :
