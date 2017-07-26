@@ -1,5 +1,5 @@
 ﻿---
-title: "TP3 - INF111-80-81 Programmation orientée-objet(hors programme) (E2016)"
+title: "TP3 - INF111-80-81 Programmation orientée-objet(hors programme) (E2017)"
 subtitle: "TP à réaliser en équipe de deux et à rendre le 15 aout à 23h55"
 author: 
 - name: Mathieu Nayrolles
