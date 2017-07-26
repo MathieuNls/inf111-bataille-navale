@@ -1,6 +1,6 @@
 ﻿---
-title: "TP3 - INF111-01-02 Programmation orientée-objet(hors programme) (A2016)"
-subtitle: "TP à réaliser en équipe de deux et à rendre le 1er Décembre à 23h55"
+title: "TP3 - INF111-80-81 Programmation orientée-objet(hors programme) (E2016)"
+subtitle: "TP à réaliser en équipe de deux et à rendre le 15 aout à 23h55"
 author: 
 - name: Mathieu Nayrolles
   location: Montréal, QC, Canada
